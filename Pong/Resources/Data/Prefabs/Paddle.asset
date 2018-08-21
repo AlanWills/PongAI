@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Prefab>
+    <GameObjects>
+      <GameObject layer="GUI" name="Paddle">
+        <Components>
+          <SpriteRenderer sprite="Textures\UI\Rectangle.png" size="20, 80"/>
+          <RectangleCollider width="20" height="80"/>
+          <RigidBody2D/>
+          <KeyboardTranslationScript/>
+        </Components>
+      </GameObject>
+    </GameObjects>
+  </Prefab>
+</Root>
