@@ -171,6 +171,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Ball\BounceOffColliders.cpp" />
+    <ClCompile Include="Source\Level.cpp" />
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="Source\PongGame.cpp" />
   </ItemGroup>
@@ -195,6 +197,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Headers\Level.h" />
+    <ClInclude Include="Headers\Ball\BounceOffColliders.h" />
     <ClInclude Include="Headers\PongGame.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

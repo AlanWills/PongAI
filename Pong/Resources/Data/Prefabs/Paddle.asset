@@ -2,12 +2,12 @@
 <Root>
   <Prefab>
     <GameObjects>
-      <GameObject layer="GUI" name="Paddle">
+      <GameObject layer="GUI" name="Paddle" tag="Paddle">
         <Components>
           <SpriteRenderer sprite="Textures\UI\Rectangle.png" size="20, 80"/>
           <RectangleCollider width="20" height="80"/>
           <RigidBody2D/>
-          <KeyboardTranslationScript/>
+          <KeyboardRigidBody2DController/>
         </Components>
       </GameObject>
     </GameObjects>

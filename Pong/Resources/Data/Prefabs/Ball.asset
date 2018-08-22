@@ -2,11 +2,12 @@
 <Root>
   <Prefab>
     <GameObjects>
-      <GameObject layer="GUI" name="Paddle">
+      <GameObject layer="GUI" name="Ball">
         <Components>
           <SpriteRenderer sprite="Textures\UI\Rectangle.png" size="5, 5"/>
           <RectangleCollider width="5" height="5"/>
-          <RigidBody2D/>
+          <RigidBody2D linear_velocity="500, 500"/>
+          <BounceOffColliders/>
         </Components>
       </GameObject>
     </GameObjects>

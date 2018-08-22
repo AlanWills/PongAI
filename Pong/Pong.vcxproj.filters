@@ -32,6 +32,12 @@
     <ClCompile Include="Source\PongGame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Ball\BounceOffColliders.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Level.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Font Include="Resources\Fonts\Arial.ttf" />
@@ -62,6 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\PongGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Ball\BounceOffColliders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Level.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
