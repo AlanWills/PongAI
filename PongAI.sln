@@ -17,6 +17,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestUtils", "CelesteEngine\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CelesteEngineTestUtils", "CelesteEngine\CelesteEngineTestUtils\CelesteEngineTestUtils.vcxproj", "{BB04BA24-E88D-4697-B55C-7C518AFD6BF8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NeuralNetworks", "NeuralNetworks", "{E29DD727-DE6E-484B-B77A-5D467802086A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Neuron", "NeuralNetworks\Neuron\Neuron.vcxproj", "{A810DAFC-47AE-4B0A-80A7-350EFA5F9134}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -87,6 +91,18 @@ Global
 		{BB04BA24-E88D-4697-B55C-7C518AFD6BF8}.Testing|x64.Build.0 = Release|x64
 		{BB04BA24-E88D-4697-B55C-7C518AFD6BF8}.Testing|x86.ActiveCfg = Release|Win32
 		{BB04BA24-E88D-4697-B55C-7C518AFD6BF8}.Testing|x86.Build.0 = Release|Win32
+		{A810DAFC-47AE-4B0A-80A7-350EFA5F9134}.Debug|x64.ActiveCfg = Debug|x64
+		{A810DAFC-47AE-4B0A-80A7-350EFA5F9134}.Debug|x64.Build.0 = Debug|x64
+		{A810DAFC-47AE-4B0A-80A7-350EFA5F9134}.Debug|x86.ActiveCfg = Debug|Win32
+		{A810DAFC-47AE-4B0A-80A7-350EFA5F9134}.Debug|x86.Build.0 = Debug|Win32
+		{A810DAFC-47AE-4B0A-80A7-350EFA5F9134}.Release|x64.ActiveCfg = Release|x64
+		{A810DAFC-47AE-4B0A-80A7-350EFA5F9134}.Release|x64.Build.0 = Release|x64
+		{A810DAFC-47AE-4B0A-80A7-350EFA5F9134}.Release|x86.ActiveCfg = Release|Win32
+		{A810DAFC-47AE-4B0A-80A7-350EFA5F9134}.Release|x86.Build.0 = Release|Win32
+		{A810DAFC-47AE-4B0A-80A7-350EFA5F9134}.Testing|x64.ActiveCfg = Release|x64
+		{A810DAFC-47AE-4B0A-80A7-350EFA5F9134}.Testing|x64.Build.0 = Release|x64
+		{A810DAFC-47AE-4B0A-80A7-350EFA5F9134}.Testing|x86.ActiveCfg = Release|Win32
+		{A810DAFC-47AE-4B0A-80A7-350EFA5F9134}.Testing|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,6 +112,7 @@ Global
 		{E07541B6-55FF-4134-B937-1C62821EE5FB} = {2716C435-5CE1-45E4-9CBA-C653809F867C}
 		{7F06E53E-178C-4E7E-8F24-061F18AA402A} = {1D4A929B-D3D9-4D48-BABA-822EC81FCC4C}
 		{BB04BA24-E88D-4697-B55C-7C518AFD6BF8} = {2716C435-5CE1-45E4-9CBA-C653809F867C}
+		{A810DAFC-47AE-4B0A-80A7-350EFA5F9134} = {E29DD727-DE6E-484B-B77A-5D467802086A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2DBA9900-36F1-40BA-BB20-0E7AE0DE77DB}

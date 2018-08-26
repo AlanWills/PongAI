@@ -21,22 +21,22 @@
     <GameObjects>
       <GameObject layer="GUI" name="Top Collider" position="0.5%,1%" tag="HorizontalBoundary">
         <Components>
-          <RectangleCollider width="1" height="10" offset="0,5"/>
+          <RectangleCollider dimensions="1,10" offset="0,5"/>
         </Components>
       </GameObject>
       <GameObject layer="GUI" name="Right Collider" position="1%,0.5%" tag="VerticalBoundary">
         <Components>
-          <RectangleCollider width="10" height="1" offset="5,0"/>
+          <RectangleCollider dimensions="10,1" offset="5,0"/>
         </Components>
       </GameObject>
       <GameObject layer="GUI" name="Bottom Collider" position="0.5%,0%" tag="HorizontalBoundary">
         <Components>
-          <RectangleCollider width="1" height="10" offset="0,-5"/>
+          <RectangleCollider dimensions="1,10" offset="0,-5"/>
         </Components>
       </GameObject>
       <GameObject layer="GUI" name="Left Collider" position="0%,0.5%" tag="VerticalBoundary">
         <Components>
-          <RectangleCollider width="10" height="1" offset="-5,0"/>
+          <RectangleCollider dimensions="10,1" offset="-5,0"/>
         </Components>
       </GameObject>
     </GameObjects>

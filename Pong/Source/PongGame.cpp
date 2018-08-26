@@ -5,6 +5,7 @@
 #include "Rendering/SpriteRenderer.h"
 #include "Input/KeyboardRigidBody2DController.h"
 #include "Physics/RectangleCollider.h"
+#include "AI/AIController.h"
 #include "Level.h"
 
 
@@ -20,8 +21,11 @@ namespace PongAI
     Path gameplayScreen(getResourcesDirectory(), "Data", "Screens", "GameplayScreen.asset");
     Handle<Screen> screen = ScreenLoader::load(gameplayScreen);
 
-    Path paddle("Data", "Prefabs", "Paddle.asset");
-    const Handle<Prefab>& paddlePrefab = getResourceManager()->load<Prefab>(paddle);
+    Path leftHandPaddle("Data", "Prefabs", "LeftHandPaddle.asset");
+    const Handle<Prefab>& leftHandPaddlePrefab = getResourceManager()->load<Prefab>(leftHandPaddle);
+
+    Path rightHandPaddle("Data", "Prefabs", "RightHandPaddle.asset");
+    const Handle<Prefab>& rightHandPaddlePrefab = getResourceManager()->load<Prefab>(rightHandPaddle);
 
     Path ball("Data", "Prefabs", "Ball.asset");
     const Handle<Prefab>& ballPrefab = getResourceManager()->load<Prefab>(ball);
@@ -48,9 +52,8 @@ namespace PongAI
 
     // Player
     {
-      const Handle<GameObject>& playerPaddle = paddlePrefab->instantiate(screen);
-      playerPaddle->setName("Player");
-
+      const Handle<GameObject>& playerPaddle = leftHandPaddlePrefab->instantiate(screen);
+      
       const Handle<Input::KeyboardRigidBody2DController>& playerController = playerPaddle->findComponent<Input::KeyboardRigidBody2DController>();
       playerController->setIncrementMode(Input::KeyboardRigidBody2DController::IncrementMode::kToggle);
       playerController->setLinearVelocityDelta(600);
@@ -62,14 +65,17 @@ namespace PongAI
 
     // Opponent
     {
-      const Handle<GameObject>& opponentPaddle = paddlePrefab->instantiate(screen);
-      opponentPaddle->setName("Opponent");
-
+      const Handle<GameObject>& opponentPaddle = rightHandPaddlePrefab->instantiate(screen);
+      
       const Handle<Input::KeyboardRigidBody2DController>& opponentController = opponentPaddle->findComponent<Input::KeyboardRigidBody2DController>();
       opponentController->setIncrementMode(Input::KeyboardRigidBody2DController::IncrementMode::kToggle);
       opponentController->setLinearVelocityDelta(600);
       opponentController->setIncreaseYLinearVelocityKey(GLFW_KEY_UP);
       opponentController->setDecreaseYLinearVelocityKey(GLFW_KEY_DOWN);
+
+      // Topology scriptable object
+      const Handle<AIController>& aiController = opponentPaddle->findComponent<AIController>();
+      aiController->getNetwork()->initializeTopology(std::vector<size_t>());
 
       Physics::addSimulatedBody(opponentPaddle->findComponent<Physics::Collider>(), opponentPaddle->findComponent<Physics::RigidBody2D>());
     }

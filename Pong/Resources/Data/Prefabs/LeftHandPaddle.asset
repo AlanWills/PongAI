@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Prefab>
+    <GameObjects>
+      <GameObject layer="GUI" name="LeftHandPaddle" tag="Paddle">
+        <Components>
+          <SpriteRenderer sprite="Textures\UI\Rectangle.png" size="20, 80"/>
+          <RectangleCollider dimensions="20,80"/>
+          <RigidBody2D/>
+          <KeyboardRigidBody2DController increment_mode="toggle" linear_velocity_delta="600,600" increase_linear_velocity_key="w" decrease_linear_velocity_key="s"/>
+        </Components>
+      </GameObject>
+    </GameObjects>
+  </Prefab>
+</Root>

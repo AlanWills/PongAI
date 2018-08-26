@@ -38,6 +38,9 @@
     <ClCompile Include="Source\Level.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\AI\AIController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Font Include="Resources\Fonts\Arial.ttf" />
@@ -60,11 +63,12 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="Resources\Data\Prefabs\Paddle.asset" />
     <Xml Include="Resources\Data\Screens\GameplayScreen.asset" />
+    <Xml Include="Resources\Data\Prefabs\LeftHandPaddle.asset" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Data\Prefabs\Ball.asset" />
+    <None Include="Resources\Data\Prefabs\RightHandPaddle.asset" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\PongGame.h">
@@ -74,6 +78,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Headers\Level.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\AI\AIController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
